@@ -10,23 +10,24 @@
 
 <div class="container">
     <div class="row">
-        {% for value in key %}
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem; margin: 40px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{value.name}}</h5>
-                    <p class="card-text">{{value.description}}</p>
-                    <button type="button" class="btn btn-primary">
-                        Price <span class="badge badge-light">{{value.price}}</span>
-                        <span class="sr-only"></span>
-                    </button>
-                </div>
-            </div>
+    {% for x in key %}
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem; margin: 20px;">
+          <img src="{{ x.img.url }}" class="card-img-top" alt="{{x.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{x.name}}</h5>
+            <p class="card-text">{{x.description}}</p>
+            <button type="button" class="btn btn-primary">
+                Price <span class="badge badge-light">{{x.price}}</span>
+                <span class="sr-only"></span>
+              </button>
+          </div>
         </div>
-        {% endfor %}
+      </div>
+    {% endfor %}
     </div>
-</div>
+  </div>
+  
 
 
 <!-- Card Template which align center -->
